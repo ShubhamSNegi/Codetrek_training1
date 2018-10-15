@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
 
 <?php
 $servername = "localhost";
@@ -11,24 +8,13 @@ $dbname = "codetrek_forum";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
-
-$sql = "SELECT *FROM questions";
-$result = mysqli_query($conn, $sql);
-
-if (mysqli_num_rows($result) > 0) {
-    // output data of each row
-    while($row = mysqli_fetch_assoc($result)) {
-      echo "title".$row["title"];
-    }
-} else {
-    echo "0 results";
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
-
 mysqli_close($conn);
 ?> 
 
-</body>
-</html>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,7 +26,7 @@ mysqli_close($conn);
 </head>
 <body>
 <nav class="navbar navbar-expand-lg  bg-dark ">
-  <a class="navbar-brand" href="#" style="color:white">Codetrek Forum</a>
+  <a class="navbar-brand" href="inde.php" style="color:white">Codetrek Forum</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -87,16 +73,30 @@ mysqli_close($conn);
 <p><span style="color:blue">Satendra Rawat</span> asked on Sep 27,2018</p>
 	<i class="far fa-thumbs-up"> 14</i> <i class="far fa-thumbs-down"> 2</i> <i class="far fa-comments"> 14 answers</i>
 </div>
-<div class="shadow-sm p-3 mb-5 bg-white rounded" style="margin-left:11%;margin-right:12%;margin-top:2%; padding: 10px;
+
+      <?php  
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+       $sql="SELECT * FROM questions";
+     $result=mysqli_query($conn,$sql);
+// Associative array
+while($row=mysqli_fetch_assoc($result)){
+       ?>
+       <div class="shadow-sm p-3 mb-5 bg-white rounded" style="margin-left:11%;margin-right:12%;margin-top:2%; padding: 10px;
     box-shadow: 2px 1px 2px 2px grey;">
-    <?php echo $row["title"]; ?>
-  <p class="text-muted"><br><span class="badge badge-secondary bg-info">fontawesome</span> <span class="badge badge-secondary bg-info ">icons</span> <span class="badge badge-secondary bg-info">frontend</span> </p>
-  
+  <h5><?php echo $row["title"]; ?></h5>
+<p class="text-muted"> <?php  echo $row['description']; ?><br>
+          <?php $tags=explode(',',$row['tags']);
+               foreach ( $tags as $i) {
+                 echo "<span class='badge badge-primary mr-2'>".$i."</span>";
+               }
+              ?></p>
 
 <p><span style="color:blue">Satendra Rawat</span> asked on Sep 27,2018</p>
   <i class="far fa-thumbs-up"> 14</i> <i class="far fa-thumbs-down"> 2</i> <i class="far fa-comments"> 14 answers</i>
-</div>
-
+</div>    <?php
+       }
+      ?>
 
 
 <footer class="page-footer font" style="background-color: #f0f5f5;">

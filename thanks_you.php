@@ -9,13 +9,12 @@ if (!$conn) {
 }
 $title=$_POST['title'];
 $description=$_POST['description'];
+$created=date('Y-m-d H:i:s');
 $tags=$_POST['tags'];
-
 $sql = "INSERT INTO questions (title, description, tags,created_at,updated_at)
-VALUES ('$title', '$description', '$tags','time()','$time()')";
+VALUES ('$title', '$description', '$tags','$created','15_oct')";
 
 if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
@@ -28,6 +27,8 @@ mysqli_close($conn);
 	<title>thanks-you</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script  src="main.js"></script>
+
 </head>
 <body>
 <nav class="navbar navbar-expand-lg  bg-dark ">
