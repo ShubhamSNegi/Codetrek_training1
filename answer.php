@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Answer</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script  src="main.js"></script>
+
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg  bg-dark ">
+  <a class="navbar-brand" href="inde.php" style="color:white">Codetrek Forum</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link " href="#" style="color:white">Questions <span class="sr-only">(current)</span></a>
+    </div>10
+    <div class="navbar ml-auto">
+      <i class="fas fa-cog" style="color:white ;margin-right:10px;"></i>
+      <i class="fas fa-caret-down"style="color:white "></i>
+    </div>
+  </div>
+</nav>
+	<div class="container">
+    <h4 style="margin-top: 5%">How do I use Git and Github?</h4>
+	<p class="text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.<br><span class="badge badge-secondary bg-info">git</span> <span class="badge badge-secondary bg-info ">github</span> <span class="badge badge-secondary bg-info">vcs</span></p>
+
+	<p><span style="color:blue">Abhisek Pokriyal</span> asked on Sep 27,2018</p>
+	<i class="far fa-thumbs-up"> 14</i> <i class="far fa-thumbs-down"> 2</i> <i class="far fa-comments"> 14 answers</i>
+	</div>
+<br>
+	<div class="shadow-sm p-3 mb-5 bg-white rounded container">
+		<p><span style="color:blue">Vikas Rinvi</span> answered on Sep 27,2018</p>
+	<p class="text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p></div>
+  
+<div class="shadow-sm p-3 mb-5 bg-white rounded container">
+	<p><span style="color:blue">Satendra Rawat</span> answered on Sep 27,2018</p>
+	<p class="text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+  
+
+</div>
+	</div>
+	<footer class="page-footer font" style="background-color: #f0f5f5;">
+  <div class="footer-copyright text-center py-3" style="color:blue;"><i class="fas fa-code"></i>Developed at Codetrek Tehri 2018
+  </div>
+</footer>
+
+</body>
+</html>
